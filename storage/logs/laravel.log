@@ -1,0 +1,76 @@
+[2024-03-16 20:22:04] local.ERROR: Carbon\Carbon::setLastErrors(): Argument #1 ($lastErrors) must be of type array, bool given, called in F:\pharmacy-managment\install\vendor\nesbot\carbon\src\Carbon\Traits\Creator.php on line 98 {"exception":"[object] (TypeError(code: 0): Carbon\\Carbon::setLastErrors(): Argument #1 ($lastErrors) must be of type array, bool given, called in F:\\pharmacy-managment\\install\\vendor\
+esbot\\carbon\\src\\Carbon\\Traits\\Creator.php on line 98 at F:\\pharmacy-managment\\install\\vendor\
+esbot\\carbon\\src\\Carbon\\Traits\\Creator.php:928)
+[stacktrace]
+#0 F:\\pharmacy-managment\\install\\vendor\
+esbot\\carbon\\src\\Carbon\\Traits\\Creator.php(98): Carbon\\Carbon::setLastErrors(false)
+#1 F:\\pharmacy-managment\\install\\vendor\
+esbot\\carbon\\src\\Carbon\\Traits\\Creator.php(252): Carbon\\Carbon->__construct(NULL, NULL)
+#2 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\DateFactory.php(217): Carbon\\Carbon::now()
+#3 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(261): Illuminate\\Support\\DateFactory->__call('now', Array)
+#4 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Scheduling\\ScheduleRunCommand.php(73): Illuminate\\Support\\Facades\\Facade::__callStatic('now', Array)
+#5 [internal function]: Illuminate\\Console\\Scheduling\\ScheduleRunCommand->__construct()
+#6 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(921): ReflectionClass->newInstanceArgs(Array)
+#7 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(292): Illuminate\\Container\\Container->build('Illuminate\\\\Cons...')
+#8 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(873): Illuminate\\Container\\Container->Illuminate\\Container\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#9 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(758): Illuminate\\Container\\Container->build(Object(Closure))
+#10 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(851): Illuminate\\Container\\Container->resolve('Illuminate\\\\Cons...', Array, true)
+#11 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Foundation\\Application->resolve('Illuminate\\\\Cons...', Array)
+#12 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(836): Illuminate\\Container\\Container->make('Illuminate\\\\Cons...', Array)
+#13 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(262): Illuminate\\Foundation\\Application->make('Illuminate\\\\Cons...')
+#14 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(276): Illuminate\\Console\\Application->resolve('Illuminate\\\\Cons...')
+#15 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\ServiceProvider.php(404): Illuminate\\Console\\Application->resolveCommands(Array)
+#16 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(153): Illuminate\\Support\\ServiceProvider->Illuminate\\Support\\{closure}(Object(Illuminate\\Console\\Application))
+#17 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(74): Illuminate\\Console\\Application->bootstrap()
+#18 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(330): Illuminate\\Console\\Application->__construct(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Events\\Dispatcher), '8.81.0')
+#19 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->getArtisan()
+#20 F:\\pharmacy-managment\\install\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 {main}
+"} 
+[2024-03-16 20:22:04] local.ERROR: Uncaught Whoops\Exception\ErrorException: Using ${var} in strings is deprecated, use {$var} instead in F:\pharmacy-managment\install\vendor\facade\ignition\src\SolutionProviders\MergeConflictSolutionProvider.php:52
+Stack trace:
+#0 F:\pharmacy-managment\install\vendor\composer\ClassLoader.php(576): Whoops\Run->handleError(8192, 'Using ${var} in...', 'F:\\pharmacy-man...', 52)
+#1 F:\pharmacy-managment\install\vendor\composer\ClassLoader.php(576): include()
+#2 F:\pharmacy-managment\install\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}('F:\\pharmacy-man...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('Facade\\Ignition...')
+#4 F:\pharmacy-managment\install\vendor\facade\ignition\src\SolutionProviders\SolutionProviderRepository.php(50): class_implements('Facade\\Ignition...')
+#5 [internal function]: Facade\Ignition\SolutionProviders\SolutionProviderRepository->Facade\Ignition\SolutionProviders\{closure}('Facade\\Ignition...', 10)
+#6 F:\pharmacy-managment\install\vendor\laravel\framework\src\Illuminate\Collections\Arr.php(717): array_filter(Array, Object(Closure), 1)
+#7 F:\pharmacy-managment\install\vendor\laravel\framework\src\Illuminate\Collections\Collection.php(358): Illuminate\Support\Arr::where(Array, Object(Closure))
+#8 F:\pharmacy-managment\install\vendor\facade\ignition\src\SolutionProviders\SolutionProviderRepository.php(49): Illuminate\Support\Collection->filter(Object(Closure))
+#9 F:\pharmacy-managment\install\vendor\nunomaduro\collision\src\Adapters\Laravel\IgnitionSolutionsRepository.php(36): Facade\Ignition\SolutionProviders\SolutionProviderRepository->getSolutionsForThrowable(Object(Whoops\Exception\ErrorException))
+#10 F:\pharmacy-managment\install\vendor\nunomaduro\collision\src\Writer.php(244): NunoMaduro\Collision\Adapters\Laravel\IgnitionSolutionsRepository->getFromThrowable(Object(Whoops\Exception\ErrorException))
+#11 F:\pharmacy-managment\install\vendor\nunomaduro\collision\src\Writer.php(123): NunoMaduro\Collision\Writer->renderSolution(Object(Whoops\Exception\Inspector))
+#12 F:\pharmacy-managment\install\vendor\nunomaduro\collision\src\Handler.php(39): NunoMaduro\Collision\Writer->write(Object(Whoops\Exception\Inspector))
+#13 F:\pharmacy-managment\install\vendor\filp\whoops\src\Whoops\Run.php(370): NunoMaduro\Collision\Handler->handle(Object(Whoops\Exception\ErrorException))
+#14 [internal function]: Whoops\Run->handleException(Object(Whoops\Exception\ErrorException))
+#15 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Whoops\\Exception\\ErrorException: Using ${var} in strings is deprecated, use {$var} instead in F:\\pharmacy-managment\\install\\vendor\\facade\\ignition\\src\\SolutionProviders\\MergeConflictSolutionProvider.php:52
+Stack trace:
+#0 F:\\pharmacy-managment\\install\\vendor\\composer\\ClassLoader.php(576): Whoops\\Run->handleError(8192, 'Using ${var} in...', 'F:\\\\pharmacy-man...', 52)
+#1 F:\\pharmacy-managment\\install\\vendor\\composer\\ClassLoader.php(576): include()
+#2 F:\\pharmacy-managment\\install\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}('F:\\\\pharmacy-man...')
+#3 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Facade\\\\Ignition...')
+#4 F:\\pharmacy-managment\\install\\vendor\\facade\\ignition\\src\\SolutionProviders\\SolutionProviderRepository.php(50): class_implements('Facade\\\\Ignition...')
+#5 [internal function]: Facade\\Ignition\\SolutionProviders\\SolutionProviderRepository->Facade\\Ignition\\SolutionProviders\\{closure}('Facade\\\\Ignition...', 10)
+#6 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Arr.php(717): array_filter(Array, Object(Closure), 1)
+#7 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Collection.php(358): Illuminate\\Support\\Arr::where(Array, Object(Closure))
+#8 F:\\pharmacy-managment\\install\\vendor\\facade\\ignition\\src\\SolutionProviders\\SolutionProviderRepository.php(49): Illuminate\\Support\\Collection->filter(Object(Closure))
+#9 F:\\pharmacy-managment\\install\\vendor\
+unomaduro\\collision\\src\\Adapters\\Laravel\\IgnitionSolutionsRepository.php(36): Facade\\Ignition\\SolutionProviders\\SolutionProviderRepository->getSolutionsForThrowable(Object(Whoops\\Exception\\ErrorException))
+#10 F:\\pharmacy-managment\\install\\vendor\
+unomaduro\\collision\\src\\Writer.php(244): NunoMaduro\\Collision\\Adapters\\Laravel\\IgnitionSolutionsRepository->getFromThrowable(Object(Whoops\\Exception\\ErrorException))
+#11 F:\\pharmacy-managment\\install\\vendor\
+unomaduro\\collision\\src\\Writer.php(123): NunoMaduro\\Collision\\Writer->renderSolution(Object(Whoops\\Exception\\Inspector))
+#12 F:\\pharmacy-managment\\install\\vendor\
+unomaduro\\collision\\src\\Handler.php(39): NunoMaduro\\Collision\\Writer->write(Object(Whoops\\Exception\\Inspector))
+#13 F:\\pharmacy-managment\\install\\vendor\\filp\\whoops\\src\\Whoops\\Run.php(370): NunoMaduro\\Collision\\Handler->handle(Object(Whoops\\Exception\\ErrorException))
+#14 [internal function]: Whoops\\Run->handleException(Object(Whoops\\Exception\\ErrorException))
+#15 {main}
+  thrown at F:\\pharmacy-managment\\install\\vendor\\facade\\ignition\\src\\SolutionProviders\\MergeConflictSolutionProvider.php:52)
+[stacktrace]
+#0 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(217): Symfony\\Component\\ErrorHandler\\Error\\FatalError->__construct(message: ''Uncaught Whoop...', code: '0', error: '['type' => 1, '...', traceOffset: '0', traceArgs: '???', trace: '???')
+#1 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(204): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->fatalErrorFromPhpError(error: '['type' => 1, '...', traceOffset: '0')
+#2 F:\\pharmacy-managment\\install\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(0): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleShutdown()
+#3 {main}
+"} 
