@@ -33,7 +33,7 @@ Route::group(['domain' => '{username}.pharmacyss.com', 'middleware' => ['cartid'
     Route::get('/delcart/{id}', 'HomeController@delcart')->name('shop.delcart');
     Route::get('/thank/{id}', 'HomeController@thank')->name('thank');
     Route::get('/contact.html', 'HomeController@contact')->name('home.contact');
-    Route::any('login', 'HomeController@login')->name('signin');
+    Route::any('/login', 'HomeController@login')->name('login');
 });
 
 Route::group(['middleware' => ['local']], function () {

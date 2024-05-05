@@ -99,7 +99,7 @@
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
                                 <h2 class="card-title fw-bold mb-1 text-uppercase">Welcome to Pharmacy Software Solution.</h2>
                                 <p class="card-text mb-2 ">{{ translate('Please sign-in to your account and manage your pharmacy.') }}</p>
-                                <form class="auth-login-form mt-2" action="{{ route('login') }}" method="POST">
+                                <form class="auth-login-form mt-2" action="{{ route('login') }}" method="POST" >
                                     @csrf
                                     <div class="mb-1">
                                         <label class="form-label" for="login-email">{{ __('pages.email') }} </label>

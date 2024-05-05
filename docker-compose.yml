@@ -1,0 +1,22 @@
+version: '3.8'
+
+volumes:
+  ges_pharma_volume:
+
+networks:
+  ges_pharma_network:
+
+services:
+  ges_pharma_db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - ges_pharma_volume:/var/lib/postgresql/data
+    ports:
+      - ${POSTGRES_PORT:-5441}:5432
+    networks:
+      - ges_pharma_network
